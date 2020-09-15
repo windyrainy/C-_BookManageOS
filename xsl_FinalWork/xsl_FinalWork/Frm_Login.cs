@@ -34,7 +34,7 @@ namespace xsl_FinalWork
         {
             Identify idc = new Identify();
             String str = idc.getRandom(4);
-            txt_GetIdc.Text = str;
+            //txt_GetIdc.Text = str;
         }
         private void Frm_Login_Load(object sender, EventArgs e)
         {
@@ -51,15 +51,18 @@ namespace xsl_FinalWork
 
         private void llbl_Regit_MouseEnter(object sender, EventArgs e)
         {
-            llbl_Regit.ForeColor = Color.Blue;
+           // llbl_Regit.ForeColor = Color.Blue;
         }
 
         private void llbl_Regit_MouseLeave(object sender, EventArgs e)
         {
-            llbl_Regit.ForeColor = Color.White;
+           // llbl_Regit.ForeColor = Color.White;
         }
 
 
+
+       
+        /*
         private void checkLogin()
         {
             if (rbtn_1.Checked)
@@ -85,11 +88,7 @@ namespace xsl_FinalWork
                 MessageBox.Show("密码不能为空！");
                 txt_Pwd.Focus();
             }
-            else if (txt_Idc.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("请输入验证码！");
-                txt_Idc.Focus();
-            }
+            
             else
             {
                 OleDbConnection con = new OleDbConnection(Message.conStr);
@@ -117,8 +116,7 @@ namespace xsl_FinalWork
                         read = cmd.ExecuteReader();
                         if (read.HasRows)
                         {
-                            if (txt_Idc.Text.Trim().ToUpper().Equals(txt_GetIdc.Text.Trim().ToUpper()))
-                            {
+                          
                                 name = txt_Name.Text.Trim();
                                 pwd = txt_Pwd.Text.Trim();
                                 if (login)
@@ -133,15 +131,7 @@ namespace xsl_FinalWork
                                     frm.Show();//打开一个main窗体
                                     this.Hide();
                                 }
-                            }
-                            else
-                            {
-                                MessageBox.Show("验证码错误，请重新输入！");
-                                txt_Idc.Text = "";
-                                txt_Idc.Focus();
-                                initIdc();
-                                con.Close();
-                            }
+                                                     
                         }
                         else
                         {
@@ -152,7 +142,7 @@ namespace xsl_FinalWork
                     {
                         MessageBox.Show("密码错误，请重新输入！");
                         txt_Pwd.Text = "";
-                        txt_Idc.Text = "";
+                       
                         txt_Pwd.Focus();
                         initIdc();
                         count++;
@@ -176,21 +166,14 @@ namespace xsl_FinalWork
                 con.Close();
             }
         }
+        */
         private void btn_Login_Click(object sender, EventArgs e)
         {
            // checkLogin();
-            if (rbtn_1.Checked)
-            {
-                role = "管理员";
-            }
-            else if (rbtn_2.Checked)
-            {
-                role = "学生";
-            }
-            else
-            {
-                role = "教师";
-            }
+           
+             role = "管理员";
+            
+            
             //登录验证
             if (txt_Name.Text.Trim().Equals(""))
             {
@@ -202,11 +185,7 @@ namespace xsl_FinalWork
                 MessageBox.Show("密码不能为空！");
                 txt_Pwd.Focus();
             }
-            else if (txt_Idc.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("请输入验证码！");
-                txt_Idc.Focus();
-            }
+           
             else
             {
                 OleDbConnection con = new OleDbConnection(Message.conStr);
@@ -234,8 +213,7 @@ namespace xsl_FinalWork
                         read = cmd.ExecuteReader();
                         if (read.HasRows)
                         {
-                            if (txt_Idc.Text.Trim().ToUpper().Equals(txt_GetIdc.Text.Trim().ToUpper()))
-                            {
+                            
                                 name = txt_Name.Text.Trim();
                                 pwd = txt_Pwd.Text.Trim();
                                 if (login)
@@ -250,15 +228,8 @@ namespace xsl_FinalWork
                                     frm.Show();//打开一个main窗体
                                     this.Hide();
                                 }
-                            }
-                            else
-                            {
-                                MessageBox.Show("验证码错误，请重新输入！");
-                                txt_Idc.Text = "";
-                                txt_Idc.Focus();
-                                initIdc();
-                                con.Close();
-                            }
+                            
+                           
                         }
                         else
                         {
@@ -269,7 +240,7 @@ namespace xsl_FinalWork
                     {
                         MessageBox.Show("密码错误，请重新输入！");
                         txt_Pwd.Text = "";
-                        txt_Idc.Text = "";
+                       
                         txt_Pwd.Focus();
                         initIdc();
                         count++;
@@ -286,7 +257,7 @@ namespace xsl_FinalWork
                     MessageBox.Show("用户不存在，请重新输入！");
                     txt_Name.Text = "";
                     txt_Pwd.Text = "";
-                    txt_Idc.Text = "";
+                    
                     txt_Name.Focus();
                     initIdc();
                     con.Close();
