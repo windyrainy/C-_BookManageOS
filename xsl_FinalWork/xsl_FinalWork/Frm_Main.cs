@@ -395,5 +395,15 @@ namespace xsl_FinalWork
             Help.ShowHelp(this, "Help.chm");
            // System.Diagnostics.Process.Start("help\\HELP.chm");
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Time_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

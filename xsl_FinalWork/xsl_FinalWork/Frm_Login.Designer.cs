@@ -33,10 +33,10 @@
             this.txt_Pwd = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.btn_Exit = new System.Windows.Forms.Button();
-            this.txt_User = new xsl_FinalWork.TextBox_tm();
             this.btn_Login = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_User = new xsl_FinalWork.TextBox_tm();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,16 +89,6 @@
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
-            // txt_User
-            // 
-            this.txt_User.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_User.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_User.Location = new System.Drawing.Point(136, 75);
-            this.txt_User.Name = "txt_User";
-            this.txt_User.Size = new System.Drawing.Size(220, 22);
-            this.txt_User.TabIndex = 11;
-            // 
             // btn_Login
             // 
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -134,6 +124,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "用户名：";
             // 
+            // txt_User
+            // 
+            this.txt_User.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_User.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_User.Location = new System.Drawing.Point(136, 75);
+            this.txt_User.Name = "txt_User";
+            this.txt_User.Size = new System.Drawing.Size(220, 22);
+            this.txt_User.TabIndex = 11;
+            // 
             // Frm_Login
             // 
             this.AcceptButton = this.btn_Login;
@@ -150,7 +150,7 @@
             this.MaximizeBox = false;
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "s";
+            this.Text = "学生德育管理系统";
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

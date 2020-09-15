@@ -68,12 +68,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Mess1 = new System.Windows.Forms.Label();
-            this.lbl_Mess2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.llbl_Mess = new System.Windows.Forms.LinkLabel();
             this.llbl_Return = new System.Windows.Forms.LinkLabel();
             this.llbl_Borrow = new System.Windows.Forms.LinkLabel();
+            this.linkLabelClazz = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -290,7 +290,7 @@
             // btn_Relog
             // 
             this.btn_Relog.AutoSize = false;
-            this.btn_Relog.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Relog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_Relog.Image = ((System.Drawing.Image)(resources.GetObject("btn_Relog.Image")));
             this.btn_Relog.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_Relog.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -303,7 +303,7 @@
             // btn_UpPwd
             // 
             this.btn_UpPwd.AutoSize = false;
-            this.btn_UpPwd.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_UpPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_UpPwd.Image = ((System.Drawing.Image)(resources.GetObject("btn_UpPwd.Image")));
             this.btn_UpPwd.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_UpPwd.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -321,7 +321,7 @@
             // btn_Lock
             // 
             this.btn_Lock.AutoSize = false;
-            this.btn_Lock.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Lock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_Lock.Image = ((System.Drawing.Image)(resources.GetObject("btn_Lock.Image")));
             this.btn_Lock.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_Lock.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -339,7 +339,7 @@
             // btn_Guide
             // 
             this.btn_Guide.AutoSize = false;
-            this.btn_Guide.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Guide.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_Guide.Image = ((System.Drawing.Image)(resources.GetObject("btn_Guide.Image")));
             this.btn_Guide.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_Guide.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -351,11 +351,11 @@
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.toolStripButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(56, 47);
+            this.toolStripButton1.Size = new System.Drawing.Size(59, 47);
             this.toolStripButton1.Text = "用户手册";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
@@ -363,7 +363,7 @@
             // btn_About
             // 
             this.btn_About.AutoSize = false;
-            this.btn_About.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_About.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_About.Image = ((System.Drawing.Image)(resources.GetObject("btn_About.Image")));
             this.btn_About.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_About.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -381,7 +381,7 @@
             // btn_Exit
             // 
             this.btn_Exit.AutoSize = false;
-            this.btn_Exit.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
             this.btn_Exit.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -397,11 +397,12 @@
             this.lbl_Time.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Time.Font = new System.Drawing.Font("华文行楷", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbl_Time.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_Time.Location = new System.Drawing.Point(894, 183);
+            this.lbl_Time.Location = new System.Drawing.Point(894, 153);
             this.lbl_Time.Name = "lbl_Time";
             this.lbl_Time.Size = new System.Drawing.Size(104, 19);
             this.lbl_Time.TabIndex = 3;
-            this.lbl_Time.Text = "现在时间：";
+            this.lbl_Time.Text = "当前时间：";
+            this.lbl_Time.Click += new System.EventHandler(this.lbl_Time_Click);
             // 
             // timer1
             // 
@@ -432,18 +433,6 @@
             this.lbl_Mess1.TabIndex = 5;
             this.lbl_Mess1.Text = "学生人数：";
             // 
-            // lbl_Mess2
-            // 
-            this.lbl_Mess2.AutoSize = true;
-            this.lbl_Mess2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Mess2.Font = new System.Drawing.Font("华文行楷", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_Mess2.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_Mess2.Location = new System.Drawing.Point(894, 153);
-            this.lbl_Mess2.Name = "lbl_Mess2";
-            this.lbl_Mess2.Size = new System.Drawing.Size(104, 19);
-            this.lbl_Mess2.TabIndex = 6;
-            this.lbl_Mess2.Text = "教师人数：";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -452,12 +441,14 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(484, 342);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(402, 37);
+            this.label1.Size = new System.Drawing.Size(542, 37);
             this.label1.TabIndex = 7;
-            this.label1.Text = "欢迎使用信息管理系统！";
+            this.label1.Text = "欢迎使用学生德育信息管理系统！";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.linkLabelClazz);
             this.panel1.Controls.Add(this.llbl_Mess);
             this.panel1.Controls.Add(this.llbl_Return);
             this.panel1.Controls.Add(this.llbl_Borrow);
@@ -502,6 +493,17 @@
             this.llbl_Borrow.Text = "图书租借";
             this.llbl_Borrow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbl_Borrow_LinkClicked);
             // 
+            // linkLabelClazz
+            // 
+            this.linkLabelClazz.AutoSize = true;
+            this.linkLabelClazz.Font = new System.Drawing.Font("华文楷体", 14.25F, System.Drawing.FontStyle.Bold);
+            this.linkLabelClazz.Location = new System.Drawing.Point(20, 158);
+            this.linkLabelClazz.Name = "linkLabelClazz";
+            this.linkLabelClazz.Size = new System.Drawing.Size(90, 21);
+            this.linkLabelClazz.TabIndex = 3;
+            this.linkLabelClazz.TabStop = true;
+            this.linkLabelClazz.Text = "班级管理";
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -511,7 +513,6 @@
             this.ClientSize = new System.Drawing.Size(1183, 610);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbl_Mess2);
             this.Controls.Add(this.lbl_Mess1);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.lbl_Time);
@@ -558,7 +559,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label lbl_Mess1;
-        private System.Windows.Forms.Label lbl_Mess2;
         private System.Windows.Forms.ToolStripMenuItem tsm_12;
         private System.Windows.Forms.ToolStripMenuItem tsm_121;
         private System.Windows.Forms.ToolStripMenuItem tsm_122;
@@ -582,5 +582,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsm_31;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.LinkLabel linkLabelClazz;
     }
 }
