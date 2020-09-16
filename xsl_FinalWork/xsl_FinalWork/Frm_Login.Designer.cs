@@ -33,10 +33,10 @@
             this.txt_Pwd = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.txt_User = new xsl_FinalWork.TextBox_tm();
             this.btn_Login = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_User = new xsl_FinalWork.TextBox_tm();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@
             this.txt_Pwd.PasswordChar = '*';
             this.txt_Pwd.Size = new System.Drawing.Size(221, 29);
             this.txt_Pwd.TabIndex = 17;
+            this.txt_Pwd.Text = "admin";
             // 
             // txt_Name
             // 
@@ -74,6 +75,7 @@
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(221, 29);
             this.txt_Name.TabIndex = 16;
+            this.txt_Name.Text = "admin";
             // 
             // btn_Exit
             // 
@@ -88,6 +90,16 @@
             this.btn_Exit.Text = "退出(&E)";
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
+            // txt_User
+            // 
+            this.txt_User.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_User.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_User.Location = new System.Drawing.Point(136, 75);
+            this.txt_User.Name = "txt_User";
+            this.txt_User.Size = new System.Drawing.Size(220, 22);
+            this.txt_User.TabIndex = 11;
             // 
             // btn_Login
             // 
@@ -123,16 +135,6 @@
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "用户名：";
-            // 
-            // txt_User
-            // 
-            this.txt_User.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_User.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_User.Location = new System.Drawing.Point(136, 75);
-            this.txt_User.Name = "txt_User";
-            this.txt_User.Size = new System.Drawing.Size(220, 22);
-            this.txt_User.TabIndex = 11;
             // 
             // Frm_Login
             // 

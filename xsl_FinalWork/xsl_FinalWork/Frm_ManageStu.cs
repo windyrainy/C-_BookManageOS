@@ -33,6 +33,22 @@ namespace xsl_FinalWork
             new EqualRatioChange(this, Width, Height).equalRatioChange();//窗体等比变化(有不断闪烁效果bug)
             //不显示出dataGridView1的最后一行空白   
             dgv_Stu.AllowUserToAddRows = false;
+           
+            TreeNode tnClass=trView_List.Nodes[0].Nodes["classNode"];
+
+            string sql = "select * from clazz";
+            DataSet dsClass = new DataSet();
+            OleDbDataAdapter adapter = new OleDbDataAdapter(sql, con);
+            adapter.Fill(dsClass, "clazz");
+            DataTable dtClazz = dsClass.Tables["clazz"];
+            for (int i = 0; i < dtClazz.Rows.Count; i++)
+            {
+                
+                TreeNode tn = new TreeNode(dtClazz.Rows[i].ItemArray[0].ToString());
+                tnClass.Nodes.Add(tn);
+            }
+           
+            //trView_List.Nodes.Add(tn);
             showAll();
         }
 
@@ -45,7 +61,7 @@ namespace xsl_FinalWork
                 dgv_Stu.Rows.RemoveAt(0);
             }
             //选取为根目录或主目录时
-            cmdStr = "select xh as 学号,xm as 姓名,xb as 性别,time as 入学时间,xy as 二级学院,zy as 专业,nj as 年级,classNum as 课程代码 from stuInfo ";
+            cmdStr = "select xh as 学号,xm as 姓名,xb as 性别,time as 入学时间,classname as 班级 from stuInfo ";
             da = new OleDbDataAdapter(cmdStr, con);
             da.Fill(ds, "stuInfo");
             dgv_Stu.DataSource = ds.Tables["stuInfo"];
@@ -54,7 +70,8 @@ namespace xsl_FinalWork
         {
             if (trView_List.SelectedNode != null)//获取点击的节点
             {
-                if (trView_List.SelectedNode.Text.Trim() == "全部信息" || trView_List.SelectedNode.Text.Trim() == "二级学院" || trView_List.SelectedNode.Text.Trim() == "专业" || trView_List.SelectedNode.Text.Trim() == "性别")
+                String selectNodeText = trView_List.SelectedNode.Text.Trim();
+                if (selectNodeText == "全部信息" || selectNodeText == "班级" || selectNodeText == "性别")
                 {
                     showAll();
                 }
@@ -67,8 +84,8 @@ namespace xsl_FinalWork
                     }
                     //选取三级子节点时
                     String index = trView_List.SelectedNode.Text;
-                    cmdStr = "select xh as 学号,xm as 姓名,xb as 性别,time as 入学时间,xy as 二级学院,zy as 专业,nj as 年级,classNum as 课程代码 from stuInfo " 
-                        + " where xy='" + index + "' or zy='" + index + "' or xb='" + index + "'";
+                    cmdStr = "select xh as 学号,xm as 姓名,xb as 性别,time as 入学时间,classname as 班级 from stuInfo "
+                        + " where classname='" + index + "' or xb='" + index + "'";
                     da = new OleDbDataAdapter(cmdStr, con);
                     da.Fill(ds, "stuInfo");
                     dgv_Stu.DataSource = ds.Tables["stuInfo"];
@@ -134,7 +151,7 @@ namespace xsl_FinalWork
                 dgv_Stu.Rows.RemoveAt(0);
             }
 
-            cmdStr = "select xh as 学号,xm as 姓名,xb as 性别,time as 入学时间,xy as 二级学院,zy as 专业,nj as 年级,classNum as 课程代码 from stuInfo "
+            cmdStr = "select xh as 学号,xm as 姓名,xb as 性别,time as 入学时间,classname as 班级 from stuInfo "
             +" where " + cols + " like '%" + txt_Mess.Text.Trim() + "%'";
             da = new OleDbDataAdapter(cmdStr, con);
             da.Fill(ds, "stuInfo");
@@ -144,6 +161,11 @@ namespace xsl_FinalWork
         private void tsmi_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmb_Cols_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

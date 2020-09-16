@@ -26,7 +26,18 @@ namespace xsl_FinalWork
 
         private void Frm_stuInfoInsert_Load(object sender, EventArgs e)
         {
-            string cmdStr = "select * from stuInfo where xh='"+txt_xh.Text.Trim()+"'";
+
+            string sql = "select * from clazz";
+            DataSet dsClass = new DataSet();
+            OleDbDataAdapter adapter = new OleDbDataAdapter(sql, con);
+            adapter.Fill(dsClass, "clazz");
+            DataTable dtClazz = dsClass.Tables["clazz"];
+            for (int i = 0; i < dtClazz.Rows.Count; i++)
+            {
+                cmb_nj.Items.Add(dtClazz.Rows[i].ItemArray[0].ToString());
+            }
+
+            string cmdStr = "select xh,xm,xb, time,xy,zy,classname from stuInfo where xh='" + txt_xh.Text.Trim()+"'";
             DataSet ds = new DataSet();
             OleDbDataAdapter da = new OleDbDataAdapter(cmdStr,con);
             da.Fill(ds,"stu");
@@ -43,6 +54,10 @@ namespace xsl_FinalWork
                 cmb_zy.Text = dt.Rows[0].ItemArray[5].ToString();
                 cmb_nj.Text = dt.Rows[0].ItemArray[6].ToString();
             }
+            
+           
+               
+           
             
 
         }
@@ -87,9 +102,8 @@ namespace xsl_FinalWork
             else if (!txt_xm.Text.Equals(""))
             {
                 //添加到stuInfo表中
-                cmdStr = "Insert into stuInfo values('" + txt_xh.Text.Trim() + "','" + txt_xm.Text.Trim() +
-               "','" + cmb_xb.Text.Trim() + "','" + dtp_time.Text.Trim() + "','" + cmb_xy.Text.Trim() + "','" +
-               cmb_zy.Text.Trim() + "'," + cmb_nj.Text.Trim() + ",0)";
+                cmdStr = "Insert into stuInfo(xh,xm,xb,classname) values('" + txt_xh.Text.Trim() + "','" + txt_xm.Text.Trim() +
+               "','" + cmb_xb.Text.Trim()  + "','" + cmb_nj.Text.Trim() + "')";
                 cmd = new OleDbCommand(cmdStr, con);
                 cmd.ExecuteNonQuery();
 

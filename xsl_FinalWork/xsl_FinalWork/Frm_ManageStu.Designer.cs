@@ -29,35 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ManageStu));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("信息技术学院");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("动物科学学院");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("体育学院");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("经济与管理学院");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("土木与水利工程学院");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("二级学院", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("班级");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("男");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("女");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("性别", new System.Windows.Forms.TreeNode[] {
             treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5});
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("计算机科学与技术");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("动物科学");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("体育教育");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("机械与电子科学与技术");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("专业", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("男");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("女");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("性别", new System.Windows.Forms.TreeNode[] {
-            treeNode12,
-            treeNode13});
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("全部信息", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode11,
-            treeNode14});
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("全部信息", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode4});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.系统sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_Exit = new System.Windows.Forms.ToolStripMenuItem();
@@ -177,6 +157,7 @@
             "性别"});
             this.cmb_Cols.Name = "cmb_Cols";
             this.cmb_Cols.Size = new System.Drawing.Size(75, 44);
+            this.cmb_Cols.Click += new System.EventHandler(this.cmb_Cols_Click);
             // 
             // toolStripLabel1
             // 
@@ -190,38 +171,18 @@
             this.trView_List.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.trView_List.Location = new System.Drawing.Point(12, 95);
             this.trView_List.Name = "trView_List";
-            treeNode1.Name = "节点4";
-            treeNode1.Text = "信息技术学院";
-            treeNode2.Name = "节点5";
-            treeNode2.Text = "动物科学学院";
-            treeNode3.Name = "节点6";
-            treeNode3.Text = "体育学院";
-            treeNode4.Name = "节点7";
-            treeNode4.Text = "经济与管理学院";
-            treeNode5.Name = "节点8";
-            treeNode5.Text = "土木与水利工程学院";
-            treeNode6.Name = "节点1";
-            treeNode6.Text = "二级学院";
-            treeNode7.Name = "节点9";
-            treeNode7.Text = "计算机科学与技术";
-            treeNode8.Name = "节点10";
-            treeNode8.Text = "动物科学";
-            treeNode9.Name = "节点11";
-            treeNode9.Text = "体育教育";
-            treeNode10.Name = "节点12";
-            treeNode10.Text = "机械与电子科学与技术";
-            treeNode11.Name = "节点2";
-            treeNode11.Text = "专业";
-            treeNode12.Name = "节点1";
-            treeNode12.Text = "男";
-            treeNode13.Name = "节点2";
-            treeNode13.Text = "女";
-            treeNode14.Name = "节点3";
-            treeNode14.Text = "性别";
-            treeNode15.Name = "节点0";
-            treeNode15.Text = "全部信息";
+            treeNode1.Name = "classNode";
+            treeNode1.Text = "班级";
+            treeNode2.Name = "节点1";
+            treeNode2.Text = "男";
+            treeNode3.Name = "节点2";
+            treeNode3.Text = "女";
+            treeNode4.Name = "sexNode";
+            treeNode4.Text = "性别";
+            treeNode5.Name = "节点0";
+            treeNode5.Text = "全部信息";
             this.trView_List.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode15});
+            treeNode5});
             this.trView_List.Size = new System.Drawing.Size(181, 512);
             this.trView_List.TabIndex = 2;
             this.trView_List.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trView_List_AfterSelect);

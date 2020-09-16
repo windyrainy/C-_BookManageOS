@@ -52,7 +52,7 @@ namespace xsl_FinalWork
                 con.Close();
                 lbl_Name.Text = "当前用户：" + Frm_Login.role;
                 lbl_Mess1.Text = "学生总数："+stuNum;
-                lbl_Mess2.Text = "教师总数："+teaNum;
+               // lbl_Mess2.Text = "教师总数："+teaNum;
                 llbl_Borrow.Text = "学生信息管理";
                 llbl_Return.Text = "教师信息管理";
                 llbl_Mess.Text = "图书信息管理";
@@ -104,7 +104,7 @@ namespace xsl_FinalWork
                 }
                 lbl_Name.Text = "当前用户：" + Frm_Login.role;
                 lbl_Mess1.Text = Frm_Login.role + "姓名：" + name;
-                lbl_Mess2.Text = "职称："+zc;
+                //lbl_Mess2.Text = "职称："+zc;
                 llbl_Borrow.Text = "图书租借";
                 llbl_Return.Text = "图书归还";
                 llbl_Mess.Text = "借还信息查询";
@@ -156,7 +156,7 @@ namespace xsl_FinalWork
                 }
                 lbl_Name.Text = "当前用户：" + Frm_Login.role;
                 lbl_Mess1.Text = Frm_Login.role + "姓名：" + name;
-                lbl_Mess2.Text = "专业：" + zy;
+                //lbl_Mess2.Text = "专业：" + zy;
                 llbl_Borrow.Text = "图书租借";
                 llbl_Return.Text = "图书归还";
                 llbl_Mess.Text = "借还信息查询";

@@ -87,6 +87,7 @@ namespace xsl_FinalWork
                 txt_Keywords.Text = dt.Rows[0].ItemArray[9].ToString();
                 txt_Info.Text = dt.Rows[0].ItemArray[10].ToString();
             }
+           
 
         }
 
